@@ -1,7 +1,23 @@
 <ul class="w3-ul">
-    <li class="w3-padding-16 content" *ngFor="let activity of activities; let i = index"  >
+    <li class="w3-padding-16 content" *ngFor="let activity of activities; let i = index">
         <span class="id"></span>
         {{activities[i]}}
-        <span style="cursor:pointer;" class="w3-right w3-margin-right delete" (click) = "deleteActivity(i)">×</span>
+        <span style="cursor:pointer;" class="w3-right w3-margin-right delete" (click)="deleteActivity(i)">×</span>
     </li>
 </ul>
+
+<form (submit) = "addActivity()">
+    <div class="w3-container w3-light-grey w3-padding-16">
+        <div class="w3-row w3-margin-top">
+            <div class="w3-col s10">
+                <input placeholder="Add activity here" class="w3-input w3-border w3-padding addActivity" name="addActivity" [(ngModel)]="inputActivity">
+            </div>
+            <div class="w3-col s2">
+                <input type="submit" value="Add" class="w3-btn w3-padding w3-green" />
+
+                <!-- <button class="w3-btn w3-padding w3-green" (click) = ''>Add</button> -->
+            </div>
+        </div>
+        <p class="w3-text-red">ERR</p>
+    </div>
+</form>
