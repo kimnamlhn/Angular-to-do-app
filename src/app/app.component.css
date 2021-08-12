@@ -1,0 +1,9 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+
+.activity_table{
+    margin-top: 100px;
+}
