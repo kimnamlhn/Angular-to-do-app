@@ -1,3 +1,7 @@
 <ul class="w3-ul">
-    <li class="w3-padding-16">xasdasd<span style="cursor:pointer;" class="w3-right w3-margin-right">×</span></li>
+    <li class="w3-padding-16 content" *ngFor="let activity of activities; let i = index"  >
+        <span class="id"></span>
+        {{activities[i]}}
+        <span style="cursor:pointer;" class="w3-right w3-margin-right delete" (click) = "deleteActivity(i)">×</span>
+    </li>
 </ul>
